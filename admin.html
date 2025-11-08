@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Galeri Multimedia</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      background: radial-gradient(circle at top, #001530, #000814);
+      color: #fff;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      color: #1e90ff;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #1e90ff;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      color: #1e90ff;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 25px;
+      margin: 25px 0;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.1);
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(30, 144, 255, 0.3);
+    }
+
+    .card h3 {
+      color: #3aa3ff;
+      margin-bottom: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
+      opacity: 0.9;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #bbb;
+    }
+
+    .tip {
+      background: rgba(30, 144, 255, 0.1);
+      border-left: 4px solid #1e90ff;
+      padding: 12px 18px;
+      margin: 15px 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galeri Multimedia - Admin</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>📘 Panduan Admin Galeri Multimedia</h2>
+    <p>
+      Halaman ini merupakan pusat kontrol utama dari website <strong>Galeri Multimedia</strong>.  
+      Sebagai admin, kamu bertanggung jawab dalam mengelola semua konten — mulai dari gambar, video, hingga audio — agar tetap relevan, menarik, dan berkualitas tinggi.
+    </p>
+
+    <div class="card">
+      <h3>🧩 Panduan Pengelolaan Konten</h3>
+      <img src="assets/img/gmbr1.png" alt="Panel Admin">
+      <p>
+        Konten multimedia seperti gambar, video, dan audio disimpan dalam struktur data yang bisa diatur dengan mudah.  
+        Admin dapat memperbarui informasi konten, menambah deskripsi, dan menyesuaikan kategori agar mudah ditemukan oleh pengguna.
+      </p>
+      <ul>
+        <li><strong>File utama:</strong> <code>data/media.json</code></li>
+        <li>Gunakan atribut <code>approved</code> untuk menyetujui atau menolak media.</li>
+        <li>Setiap media sebaiknya dilengkapi dengan <code>judul</code>, <code>kategori</code>, dan <code>deskripsi</code>.</li>
+        <li>Tambahkan tanggal unggahan untuk mendokumentasikan perkembangan karya.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Membangun Sistem Admin Dinamis</h3>
+      <img src="assets/img/gmbr2.jpg" alt="Dashboard Admin">
+      <p>
+        Untuk mengubah halaman admin ini menjadi sistem dinamis, kamu bisa menggunakan kombinasi <strong>PHP + MySQL</strong> agar data tersimpan secara permanen.  
+        Dengan login berbasis <code>session</code>, hanya admin terdaftar yang dapat mengakses dashboard pengelolaan.
+      </p>
+      <div class="tip">
+        💡 <strong>Tips:</strong> Buat tabel “media” di database MySQL dengan kolom seperti judul, deskripsi, kategori, file_path, dan status_approve.  
+        Ini akan memudahkan proses manajemen dan pencarian.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔒 Keamanan Sistem</h3>
+      <img src="assets/img/gmbr3.jpg" alt="Keamanan Sistem">
+      <p>
+        Keamanan data adalah prioritas utama dalam setiap sistem admin.  
+        Admin perlu memastikan hanya pengguna sah yang dapat mengakses data sensitif.  
+        Beberapa langkah penting yang dapat diterapkan antara lain:
+      </p>
+      <ul>
+        <li>Gunakan <code>password_hash()</code> di PHP untuk menyimpan password dengan aman.</li>
+        <li>Batasi login hanya untuk IP atau perangkat tertentu.</li>
+        <li>Tambahkan sistem <strong>CSRF Token</strong> untuk mencegah manipulasi form.</li>
+        <li>Gunakan HTTPS agar data terenkripsi saat dikirim melalui jaringan.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>👩‍💻 Peran dan Tanggung Jawab Admin</h3>
+      <img src="assets/img/gmbr4.jpg" alt="Tim Admin">
+      <p>
+        Sebagai pengelola utama, admin berperan menjaga mutu dan konsistensi isi website.  
+        Selain memastikan media yang diunggah sesuai dengan standar, admin juga harus memperhatikan tampilan dan aksesibilitas.
+      </p>
+      <ul>
+        <li>Menyeleksi setiap konten sebelum ditampilkan.</li>
+        <li>Menghapus media yang melanggar kebijakan atau hak cipta.</li>
+        <li>Memberikan deskripsi tambahan agar konten lebih informatif.</li>
+        <li>Mengatur kategori untuk pengalaman pengguna yang lebih baik.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💡 Teknologi yang Disarankan</h3>
+      <img src="assets/img/gmbr5.jpg" alt="Teknologi Web">
+      <p>
+        Untuk membuat sistem admin yang efisien dan profesional, kamu bisa memanfaatkan kombinasi beberapa teknologi berikut:
+      </p>
+      <ul>
+        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, dan framework modern seperti Tailwind atau Bootstrap.</li>
+        <li><strong>Backend:</strong> PHP, Python (Flask/Django), atau Node.js.</li>
+        <li><strong>Database:</strong> MySQL, PostgreSQL, atau SQLite.</li>
+        <li><strong>Media Storage:</strong> Lokal, Cloud, atau API penyimpanan seperti Google Drive.</li>
+      </ul>
+      <div class="tip">
+        🔹 Dengan kombinasi teknologi ini, sistem admin dapat berkembang menjadi platform profesional layaknya CMS modern.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Visi Pengembangan Selanjutnya</h3>
+      <img src="assets/img/gmbr6.jpg" alt="Pengembangan Sistem">
+      <p>
+        Tujuan jangka panjang dari proyek ini adalah menciptakan sebuah sistem galeri multimedia interaktif  
+        di mana pengguna dapat berkontribusi, berkomentar, dan saling berkolaborasi.  
+        Dengan antarmuka admin yang kuat, sistem ini dapat menjadi pusat pembelajaran dan pameran karya digital Indonesia.
+      </p>
+      <p>
+        Versi mendatang dapat mencakup fitur AI tagging otomatis, analisis statistik pengunjung, dan integrasi ke media sosial.  
+        Semua ini akan membuat situs lebih dinamis dan relevan di era digital.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Galeri Multimedia | Didesain untuk Pembelajaran Multimedia Interaktif
+  </footer>
+</body>
+</html>

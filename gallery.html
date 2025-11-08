@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Galeri Multimedia - Gallery</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      background: radial-gradient(circle at top, #001530, #000814);
+      color: #fff;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      color: #1e90ff;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #1e90ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #1e90ff;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    select {
+      padding: 8px;
+      margin-left: 5px;
+      border-radius: 8px;
+      border: none;
+      background: #1e1e2f;
+      color: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.1);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(30, 144, 255, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .card-content h3 {
+      color: #3aa3ff;
+      margin-top: 5px;
+      font-size: 1.2rem;
+    }
+
+    .card-content p {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galeri Multimedia</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>🌟 Galeri Multimedia Interaktif</h2>
+    <p>Selamat datang di koleksi karya multimedia! Di sini kamu dapat menemukan berbagai hasil karya fotografi, video, dan desain digital dari para kreator berbakat.</p>
+<!-- 
+    <div class="controls">
+      <label>Kategori:
+        <select>
+          <option>Semua</option>
+          <option>Fotografi</option>
+          <option>Video</option>
+          <option>Desain</option>
+          <option>3D</option>
+        </select>
+      </label>
+    </div> -->
+
+    <div class="grid">
+      <!-- Gambar 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Sunset">
+        <div class="card-content">
+          <h3>Fotografi Senja</h3>
+          <p>Pemandangan matahari terbenam di tepi pantai yang memancarkan nuansa tenang dan hangat. Hasil karya fotografi dengan teknik eksposur rendah.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="City Lights">
+        <div class="card-content">
+          <h3>City Lights</h3>
+          <p>Gambaran keindahan kota di malam hari dengan pencahayaan yang menawan dan efek bokeh natural dari kamera DSLR.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 3 -->
+      <div class="card">
+        <img src="assets/img/musik.jpeg" alt="Studio Music">
+        <div class="card-content">
+          <h3>Studio Musik</h3>
+          <p>Suasana studio musik modern yang digunakan dalam produksi audio digital dan rekaman profesional.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Graphic Design">
+        <div class="card-content">
+          <h3>Desain Grafis</h3>
+          <p>Contoh karya desain poster dengan penggunaan warna kontras dan tipografi modern.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 5 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61" alt="Coding Interface">
+        <div class="card-content">
+          <h3>Antarmuka Pemrograman</h3>
+          <p>Tampilan antarmuka pemrograman front-end yang menampilkan hasil kerja desainer dan developer web.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 6 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Team Collaboration">
+        <div class="card-content">
+          <h3>Kolaborasi Tim</h3>
+          <p>Tim kreatif sedang berdiskusi dan merancang ide proyek multimedia dengan bantuan teknologi digital.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 7 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Video Production">
+        <div class="card-content">
+          <h3>Produksi Video</h3>
+          <p>Proses pengambilan gambar untuk pembuatan video dokumenter dengan peralatan profesional.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 8 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1475724017904-b712052c192a" alt="Animation Art">
+        <div class="card-content">
+          <h3>Seni Animasi</h3>
+          <p>Karya animasi 2D yang menggambarkan karakter fantasi, menggunakan software Adobe Animate dan After Effects.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 9 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769" alt="3D Modeling">
+        <div class="card-content">
+          <h3>3D Modeling</h3>
+          <p>Model 3D kendaraan yang dibuat menggunakan Blender, menunjukkan detail tekstur dan pencahayaan realistis.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 10 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Coding">
+        <div class="card-content">
+          <h3>Desain Website Interaktif</h3>
+          <p>Contoh proyek website interaktif dengan efek animasi dan navigasi dinamis.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 11 -->
+      <div class="card">
+        <img src="assets/img/ar.jpg" alt="Virtual Reality">
+        <div class="card-content">
+          <h3>Virtual Reality</h3>
+          <p>Simulasi dunia virtual menggunakan headset VR untuk pengalaman multimedia yang imersif.</p>
+        </div>
+      </div>
+
+      <!-- Gambar 12 -->
+      <div class="card">
+        <img src="assets/img/drn.jpg" alt="Drone Footage">
+        <div class="card-content">
+          <h3>Drone Photography</h3>
+          <p>Pengambilan gambar udara dari drone yang memperlihatkan lanskap alam menakjubkan dari ketinggian.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Galeri Multimedia | Koleksi Digital & Kreatif</p>
+  </footer>
+</body>
+</html>

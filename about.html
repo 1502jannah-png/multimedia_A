@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Galeri Multimedia</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      background: linear-gradient(180deg, #001530 0%, #000814 100%);
+      color: #fff;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      color: #1e90ff;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #1e90ff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      color: #1e90ff;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #3aa3ff;
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      background: rgba(30, 144, 255, 0.1);
+      border-left: 4px solid #1e90ff;
+      padding: 15px 18px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 25px;
+      margin: 25px 0;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(30, 144, 255, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galeri Multimedia</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html" class="active">About</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Tentang Galeri Multimedia</h2>
+    <p>
+      <strong>Galeri Multimedia</strong> adalah platform digital yang dirancang untuk menampilkan berbagai karya visual seperti gambar, video, dan audio yang dibuat oleh mahasiswa dan kreator muda. Website ini bertujuan menjadi wadah bagi mereka yang ingin mengekspresikan ide dan kreativitas melalui media digital.
+    </p>
+
+    <div class="highlight">
+      🌐 <strong>Misi Kami:</strong> menghadirkan pengalaman visual interaktif dan inspiratif melalui koleksi multimedia yang edukatif, inovatif, dan mudah diakses oleh semua orang.
+    </div>
+
+    <div class="card">
+      <h3>📖 Sejarah Singkat</h3>
+      <p>
+        Website ini berawal dari proyek akademik yang dikembangkan oleh sekelompok mahasiswa yang memiliki ketertarikan dalam dunia desain, teknologi, dan komunikasi visual. Awalnya hanya berupa kumpulan gambar sederhana, namun berkembang menjadi sistem galeri interaktif yang mendukung berbagai format media.
+      </p>
+      <p>
+        Dengan berkembangnya teknologi multimedia seperti animasi, audio interaktif, dan video berbasis web, situs ini kini menjadi ruang eksplorasi bagi mahasiswa untuk belajar teknologi terkini serta berkolaborasi dalam proyek-proyek kreatif.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Tujuan Pengembangan</h3>
+      <p>
+        Tujuan utama dari Galeri Multimedia adalah menyediakan ruang bagi mahasiswa, dosen, dan masyarakat umum untuk:
+      </p>
+      <ul>
+        <li>Menampilkan karya-karya visual dan audio hasil pembelajaran atau penelitian.</li>
+        <li>Mempelajari tren dan teknologi multimedia terbaru.</li>
+        <li>Mendorong kolaborasi lintas jurusan dalam bidang seni dan teknologi.</li>
+        <li>Membangun komunitas kreator digital yang aktif berbagi ilmu dan inspirasi.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💡 Teknologi yang Digunakan</h3>
+      <p>
+        Dalam pengembangannya, situs ini menggunakan kombinasi berbagai teknologi web modern:
+      </p>
+      <ul>
+        <li><strong>HTML5</strong> — untuk struktur konten dan media yang responsif.</li>
+        <li><strong>CSS3</strong> — menghadirkan tampilan biru-hitam elegan dengan efek transisi halus.</li>
+        <li><strong>JavaScript</strong> — memberikan interaktivitas seperti galeri dinamis dan lightbox.</li>
+        <li><strong>JSON</strong> — menyimpan data multimedia agar mudah dikelola.</li>
+        <li><strong>PHP (opsional)</strong> — untuk sistem login dan manajemen konten berbasis server.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>👩‍🎓 Siapa yang Terlibat?</h3>
+      <p>
+        Website ini dikelola oleh mahasiswa jurusan <strong>Teknologi Informasi</strong> dan <strong>Desain Komunikasi Visual</strong> yang memiliki minat dalam bidang multimedia.  
+        Proyek ini juga melibatkan dosen pembimbing yang berperan dalam memberikan arahan teknis dan estetika visual agar hasilnya selaras dengan standar akademik dan profesional.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Visi ke Depan</h3>
+      <p>
+        Ke depannya, Galeri Multimedia berencana memperluas fungsinya menjadi portal edukasi multimedia dengan fitur-fitur seperti:
+      </p>
+      <ul>
+        <li>Tutorial interaktif tentang desain, animasi, dan produksi audio-video.</li>
+        <li>Kompetisi digital art untuk mahasiswa dan masyarakat umum.</li>
+        <li>Sistem penilaian otomatis untuk karya multimedia berdasarkan kategori.</li>
+        <li>Integrasi AI untuk membantu proses editing dan kurasi konten.</li>
+      </ul>
+      <p>
+        Dengan langkah ini, situs diharapkan dapat menjadi pusat inovasi dan pembelajaran multimedia di era digital.
+      </p>
+    </div>
+
+    <div class="highlight">
+      💬 <strong>Kesimpulan:</strong>  
+      Galeri Multimedia bukan sekadar tempat untuk menampilkan karya digital, melainkan juga laboratorium ide dan kreativitas yang menggabungkan teknologi, seni, dan pembelajaran dalam satu wadah yang dinamis.
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Galeri Multimedia — Didesain oleh Tim Kreatif Mahasiswa
+  </footer>
+</body>
+</html>
