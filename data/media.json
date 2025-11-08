@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Pameran Foto 1",
+    "type": "image",
+    "file": "media/sample1.jpg",
+    "description": "Contoh gambar 1",
+    "category": "Fotografi",
+    "approved": true
+  },
+  {
+    "id": 2,
+    "title": "Video Demo",
+    "type": "video",
+    "file": "media/sample2.mp4",
+    "description": "Contoh video demo",
+    "category": "Video",
+    "approved": true
+  },
+  {
+    "id": 3,
+    "title": "Audio Podcast",
+    "type": "audio",
+    "file": "media/sample3.mp3",
+    "description": "Contoh audio",
+    "category": "Audio",
+    "approved": false
+  }
+]
